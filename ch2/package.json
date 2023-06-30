@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel index.js -w --out-dir prd",
+    "start": "babel src -w --out-dir prd",
     "dev-serve": "nodemon prd/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

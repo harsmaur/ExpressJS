@@ -13,3 +13,7 @@
     
     
   }
+
+  write in cli in diff terminals
+  npm start
+  npm run dev-serve
