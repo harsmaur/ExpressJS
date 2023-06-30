@@ -1,4 +1,4 @@
-//Router using
+//Router using for clean code of routes and not messy code in app.js
 import express from 'express';
 import stu from './routes/student.js'  //imported router modules
 import teach from './routes/teacher.js'
