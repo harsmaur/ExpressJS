@@ -36,6 +36,7 @@ app.get('/ab?cd', (req,res)=>{
     // res.send('This is a')
 // })
 
+
 //Different ways to define callback
 
 //1. More than One callback
@@ -103,8 +104,9 @@ app.route('/student')
     res.send('Update Student')
 })
 
+
 app.route('/professor')
-.all((req,res, next)=>{
+.all((req,res, next)=>{  //
     console.log('First run this for all http method')
     next();
 })
