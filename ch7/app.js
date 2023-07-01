@@ -44,7 +44,46 @@ app.get('/location/:state.:city', (req, res)=>{
     res.send(`state: ${state} city: ${city} `)
 })
 
+
  
+//Route parameter with RegX(regular expression)
+app.get('/studentdata/delete/:id([0-9]{3})', (req, res)=>{ //restriction on id only numeric 0 to 9 with size of 3
+    console.log(req.params)   
+    res.send(`student with id: ${req.params.id} has been deleted`)
+})
+
+//or operator either post or article
+app.get('/:type(post|article)/:id', (req, res)=>{
+    console.log(req.params)
+    res.send('Post or article')
+  })
+
+
+
+
+//   app.param(nameOFParameter, callback)
+//1
+app.param('id', (req, res, next, id)=>{ //this callback will run before response callback this is also called only once.
+
+    console.log(`ID: ${id}`)
+    next();
+})
+app.get('/user/:id', (req, res)=>{
+    console.log('This is user id path')
+    res.send('Response ok')
+})
+
+//2 array of route parameter in app.param()
+app.param(['id', 'page'], (req, res, next, value)=>{ 
+    console.log(`ID: ${value}`)
+    next();
+})
+app.get('/profile/:page/:id', (req, res)=>{
+    console.log('This is user id path and page')
+    res.send('Response ok from array param')
+})
+
+
 app.listen(port, ()=>{
     console.log(`Listening to port ${port}`)
 })
