@@ -84,6 +84,13 @@ app.get('/profile/:page/:id', (req, res)=>{
 })
 
 
+//Query String 
+//using req.query
+app.get('/product', (req, res)=>{
+    console.log(req.query)
+    res.send(`reponse ok ${req.query.category}`)
+})
+
 app.listen(port, ()=>{
     console.log(`Listening to port ${port}`)
 })
