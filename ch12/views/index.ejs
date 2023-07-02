@@ -1,0 +1,55 @@
+    <%- include('./partials/header.ejs') %>  
+    <!-- Below we created a nav.ejs in partials so that code is no repeated  -->
+    <%- include('./partials/nav.ejs') %>  
+
+    <h1>EJS TEMPLATE ENGINE</h1>
+    <!-- Displaying Variable Data -->
+    <h3>
+      <%= name %>
+      <!-- these are called delimeters -->
+      <%= branch %>
+    </h3>
+
+    <!-- Creating Variables -->
+    <% var i = 20; %> <%= i %>
+
+    <!-- creating comments -->
+    <%# Comment will not be present in the rendered HTML %>
+
+    <!-- if -->
+    <% if(name){ %>
+
+    <h2>Hello(i'm inside if)</h2>
+
+    <%}%>
+
+    <!-- if conditional else -->
+    <% if(id=='0901CD211028'){ %>
+
+    <h2>Id is <%= id%></h2>
+
+    <%} else{ %> ID is invalid <% }%>
+
+    <!-- for loops  -->
+    <% for(i =5; i>=0; i--){ %> <%=marks[i] %> <% } %>
+    <hr />
+    <!-- for in loop  -->
+
+    <% for(const key in marks) {%> <%= marks[key] %> <%}%>
+
+    <!-- for of loop  -->
+<hr>
+    <%for(const mark of marks) {%>
+      <%= mark %>
+        <% } %>
+<hr>
+        <!-- for each  -->
+        <%marks.forEach((value)=>{%>
+         <%= value %>
+       <% })%>
+           <hr>
+           <!-- Function call  -->
+           <%  var current = new Date(); %>
+           <%= current %>
+
+    <%- include('./partials/footer.ejs') %>  
