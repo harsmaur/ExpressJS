@@ -1,0 +1,80 @@
+/* font  */
+.st-font{
+    font-family: 'Satisfy', cursive;
+}
+  /* Style for the green background rectangle */
+  .nav-link:hover {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .nav-link {
+    margin-bottom: 20px; /* Add a margin-bottom of 10px */
+  }
+  
+  /* Style for the active link */
+  .nav-link.active {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  html,
+  body,
+  .container-fluid,
+  .row,
+  .col-sm-2 {
+    height: 100%;
+  }
+  .imageme{
+    margin-right: 1.5rem;
+  }
+  .i-color{
+    color: chartreuse;
+  }
+  .ss-color{
+    color: silver;
+  }
+  h1{
+   color: #fff;
+  }
+  
+
+  .typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .5em solid rgb(27, 139, 21); /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end) forwards, blink-caret .75s infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100%
+      }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    0% { border-color: rgb(27, 139, 21); }
+    50% { border-color: transparent; }
+    100% { border-color: rgb(27, 139, 21); 
+    }
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .para {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  span{
+    color: rgb(33, 163, 26);
+  }
